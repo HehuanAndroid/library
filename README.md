@@ -4,7 +4,7 @@
 ## 引入
 
 请参考：
-[https://jitpack.io/#fengwenyi/library/v1.0.2](https://jitpack.io/#fengwenyi/library/v1.0.2 "https://jitpack.io/#fengwenyi/library/v1.0.2")
+[https://jitpack.io/#fengwenyi/library/v1.0.3](https://jitpack.io/#fengwenyi/library/v1.0.3 "https://jitpack.io/#fengwenyi/library/v1.0.3")
 
 
 Step 1. Add the JitPack repository to your build file
@@ -20,7 +20,7 @@ AAdd it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.fengwenyi:library:v1.0.2'
+	        compile 'com.github.fengwenyi:library:v1.0.3'
 	}
 
 
