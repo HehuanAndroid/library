@@ -25,12 +25,20 @@ Step 2. Add the dependency
 
 
 ## 用法
-1. Utils类
+1. UtilWenyiFeng类
 - toast方法
 ```
 name: toast
 param: Context, String
 ```
+
+- 检查当前网络是否可用
+```
+name: isNetworkAvailable
+param: Context
+```
+
+
 2.AppManager类（管理Activity）
 - 实例化
 ```
@@ -72,6 +80,3 @@ param:
 name: AppExit
 param: Context
 ```
-
-## 问题
-1. 关于重名问题，会在下次更新的时候做处理
