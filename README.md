@@ -82,7 +82,7 @@ param: Context
 ```
 
 
-3. FontHelperWenyiFeng类
+3. FontImgWenyiFeng类
 使用示例：
 ```
 <TextView
@@ -96,6 +96,6 @@ param: Context
 ```
 
 ```
-FontHelperWenyiFeng.injectFont(findViewById(R.id.login_tip_user));
+FontImgWenyiFeng.injectFont(findViewById(R.id.login_tip_user));
 
 ```
