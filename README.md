@@ -4,7 +4,7 @@
 ## 引入
 
 请参考：
-[https://jitpack.io/#fengwenyi/library/v1.0.3](https://jitpack.io/#fengwenyi/library/v1.0.3 "https://jitpack.io/#fengwenyi/library/v1.0.3")
+[https://jitpack.io/#fengwenyi/library/v1.0.4](https://jitpack.io/#fengwenyi/library/v1.0.4 "https://jitpack.io/#fengwenyi/library/v1.0.4")
 
 
 Step 1. Add the JitPack repository to your build file
@@ -79,4 +79,23 @@ param:
 ```
 name: AppExit
 param: Context
+```
+
+
+3. FontHelperWenyiFeng类
+使用示例：
+```
+<TextView
+	android:id="@+id/login_tip_user"
+	android:layout_width="wrap_content"
+	android:layout_height="match_parent"
+	android:gravity="center_vertical"
+	android:text="&#xf2c0;"
+	android:textColor="#aaa"
+	android:textSize="20sp"/>
+```
+
+```
+FontHelperWenyiFeng.injectFont(findViewById(R.id.login_tip_user));
+
 ```
