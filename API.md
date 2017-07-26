@@ -53,4 +53,4 @@
 | [RegularUtilWenyiFeng](javascript:;)         | 实例化并自定义正则校验规则 |
 | [customVerify](javascript:;)         | 自定义正则校验 |
 
-> 备注: 暂无参数说明及调用示例
+> 备注: 暂无参数说明及调用示例，敬请浏览源码
