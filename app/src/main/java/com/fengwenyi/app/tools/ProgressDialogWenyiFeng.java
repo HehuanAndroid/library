@@ -84,7 +84,7 @@ public class ProgressDialogWenyiFeng {
     }
 
     /**
-     * @return true即现实中，false为不在显示
+     * @return true显示中，false 隐藏中
      */
     public static boolean isShowing() {
 
