@@ -13,13 +13,8 @@ import android.widget.TextView;
 import com.fengwenyi.app.R;
 
 /**
- * Name   : ProgressDialogWenyiFeng
- * Desc   : 进度对话框
- * Use    : ...
- * Author : fengwenyi
- * Tool   : Android studio
- * Date   : 2017-07-24
- * Time   : 11:26
+ * WenyiFeng(xfsy2014@gmail.com)
+ * 2017-07-24 11:26
  */
 
 public class ProgressDialogWenyiFeng {

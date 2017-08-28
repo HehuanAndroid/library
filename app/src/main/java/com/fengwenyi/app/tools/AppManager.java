@@ -7,13 +7,8 @@ import android.content.Context;
 import java.util.Stack;
 
 /**
- * Name   : AppManager
- * Desc   : Activity管理工具
- * Use    : ...
- * Author : fengwenyi
- * Tool   : Android studio
- * Date   : 2017-07-18
- * Time   : 15:22
+ * WenyiFeng(xfsy2014@gmail.com)
+ * 2017-07-18 15:22
  */
 
 public class AppManager {
@@ -87,6 +82,11 @@ public class AppManager {
         activityStack.clear();
     }
 
+    /**
+     * 退出APP(经测试，无效)
+     * @param context 上下文
+     */
+    @Deprecated
     public void AppExit(Context context) {
         finishAllActivity();
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
