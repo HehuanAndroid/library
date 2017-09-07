@@ -83,11 +83,22 @@ public class AppManager {
     }
 
     /**
-     * 退出APP(经测试，无效)
+     * 退出APP
      * @param context 上下文
      */
     @Deprecated
     public void AppExit(Context context) {
+        finishAllActivity();
+        ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        activityManager.killBackgroundProcesses(context.getPackageName());
+        System.exit(0);
+    }
+
+    /**
+     * 退出APP
+     * @param context 上下文
+     */
+    public void appExit(Context context) {
         finishAllActivity();
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         activityManager.killBackgroundProcesses(context.getPackageName());
