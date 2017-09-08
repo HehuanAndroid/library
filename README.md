@@ -7,8 +7,8 @@
 然后，由于作者是一个Android新手，难免会有各种BUG，但是作者会持续更新，还请多多关注。
 
 ## 工具类列表
-| 类名                      | 说明|
-| :--------                |      :-----|
+| 类名                     | 说明|
+|:--------                 |:-----|
 |AppManager                |Activity管理工具类|
 |CallBackWenyiFeng         |回调接口|
 |FontImgWenyiFeng          |字体图片工具类|
@@ -32,14 +32,14 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency(由于更新非常快，请特别注意版本号)
 
 	dependencies {
-	        compile 'com.github.fengwenyi:library:v1.0.9'
+	        compile 'com.github.fengwenyi:library:170908.10'
 	}
 
 
 ## API
 
 #### 1、AppManager类
-|方法名               |参数     |返回    |说明|
+|方法名              |参数    |返回    |说明|
 |:----               |:---    |:---    |:---|
 |getInstance()       |        |AppManager|单一实例|
 |addActivity()       |Activity|       |将Activity添加到堆栈中|
@@ -56,37 +56,39 @@ Step 2. Add the dependency(由于更新非常快，请特别注意版本号)
 ```
 
 #### 2、CallBackWenyiFeng接口
-|方法名               |参数     |返回    |说明|
+|方法名              |参数    |返回    |说明|
 |:----               |:---    |:---    |:---|
 |onSuccess()         |T       |        |成功，自定义数据类型|
 |onFail()            |String  |        |失败，错误信息|
 
 #### 3、FontImgWenyiFeng类
-|方法名               |参数     |返回    |说明|
+|方法名              |参数    |返回    |说明|
 |:----               |:---    |:---    |:---|
-|injectFont()        |View    |        |显示字体图片，static|
-|injectFont()        |View, Typeface|  |显示字体图片，static|
+|injectFont()        |View    |        |static, 显示字体图片|
+|injectFont()  |View, Typeface|        |static, 显示字体图片|
+
 调用示例：
-
 ```
-//字体图片    FontHelper.injectFont(findViewById(R.id.fun_top_back));
+	//字体图片    
+	FontHelper.injectFont(findViewById(R.id.fun_top_back));
 ```
-另外，我们为你提供了一套字体图片，图片与对应码，请猛击[传送门](http://fontawesome.io/cheatsheet/)
+另外，我们为你提供了一套字体图片，请猛击[图片对应码](http://fontawesome.io/cheatsheet/)
 
-#### 4、ProgressDialogWenyiFeng接口
-|方法名               |参数     |返回    |说明|
+#### 4、ProgressDialogWenyiFeng类
+|方法名              |参数    |返回    |说明|
 |:----               |:---    |:---    |:---|
 |show() |Context, String, int, boolean, boolean||static, 参数说明（上下文，提示文字，样式，点击外边距是否可以取消，点击Home键是否可以撤销）|
-|isShoing()          |  |boolean  |static, 状态，true显示，false隐藏|
-|dismiss()           |         |       |static, 取消显示|
-调用示例：
+|isShoing()          |        |boolean |static, 状态，true显示，false隐藏|
+|dismiss()           |        |        |static, 取消显示|
 
+调用示例：
 ```
-ProgressDialogWenyiFeng.show(context, context.getResources().getString(R.string.progress_dialog_loading), 3, false, true);
+	ProgressDialogWenyiFeng.show(context, context.getResources().getString(R.string.progress_dialog_loading), 
+	3, false, true);
 ```
 
 #### 5、RegularUtilWenyiFeng类
-|方法名        |参数     |返回    |说明|
+|方法名       |参数    |返回    |说明|
 |:----        |:---    |:---    |:---|
 |isUsername() |String  |boolean |static, 正则验证用户名，参数（用户名），返回（是否合法）|
 |isPassword   |String  |boolean |static, 正则验证密码，参数（密码），返回（是否合法）|
@@ -99,10 +101,10 @@ ProgressDialogWenyiFeng.show(context, context.getResources().getString(R.string.
 |isNumber()   |String  |boolean |static, 正则验证是否是数字，参数（待测字符），返回（是否数字）|
 |RegularUtilWenyiFeng() |String |   |自定义正则规则|
 |customVerify() |String |boolean|自定义验证，参数（待测字符串），返回（是否满足条件）|
-自定义验证示例：
 
+自定义验证示例：
 ```
-		String sQQ = "[1-9][0-9]{3,10}";
+	String sQQ = "[1-9][0-9]{3,10}";
         RegularUtilWenyiFeng regularUtilWenyiFeng = new RegularUtilWenyiFeng(sQQ);
         String testQQ = "3232445924";
         boolean isCQQ = regularUtilWenyiFeng.customVerify(testQQ);
@@ -110,11 +112,12 @@ ProgressDialogWenyiFeng.show(context, context.getResources().getString(R.string.
         System.out.print(isCQQ);
 ```
 #### 6、UtilWebServiceWenyiFeng类
-|方法名        |参数     |返回    |说明|
+|方法名       |参数    |返回    |说明|
 |:----        |:---    |:---    |:---|
 |call()       |wsdl地址，命名空间，方法名称，参数集合，数据回调接口| |static, 请求WebService接口数据，参数类型及调用示例见下|
-|setThreadSize()|int| |static, 设置线程池大小|
-|setIsDotNet()|boolean| |static, 设置是否由 dotNet开发|
+|setThreadSize()|int   |        |static, 设置线程池大小|
+|setIsDotNet()|boolean |        |static, 设置是否由 dotNet开发|
+
 参数类型说明：
 ```
 wsdl地址：String
@@ -126,7 +129,7 @@ wsdl地址：String
 调用示例：
 
 ```
-	public void testWebService(String url, String namespace, String method, SimpleArrayMap<String, String> params) {
+    public void testWebService(String url, String namespace, String method, SimpleArrayMap<String, String> params) {
         UtilWebServiceWenyiFeng.call(url, namespace, method, params, new CallBackWenyiFeng<SoapObject>() {
             @Override
             public void onSuccess(SoapObject soapObject) {
@@ -142,10 +145,11 @@ wsdl地址：String
 ```
 
 #### 7、UtilWenyiFeng类
-|方法名        |参数     |返回    |说明|
+|方法名       |参数    |返回    |说明|
 |:----        |:---    |:---    |:---|
 |toast()      |Context, String| |static, 文字提示弹窗，参数（上下文，提示文字）|
 |isNetworkAvailable()|Context | |static, 检测当前网络是否可用，参数（上下文）|
+
 值得说明的是：关闭APP方法需要以下权限：
 ```
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
