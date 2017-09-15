@@ -33,7 +33,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency(由于更新非常快，请特别注意版本号)
 
 	dependencies {
-	        compile 'com.github.fengwenyi:library:170908.11'
+	        compile 'com.github.fengwenyi:library:170908.12'
 	}
 
 
