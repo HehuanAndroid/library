@@ -6,7 +6,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 /**
- * Created by Administrator on 2017/5/23 0023.
+ * WenyiFeng(xfsy2014@gmail.com)
+ * 2017/5/23 0023.
  */
 
 public class FontImgWenyiFeng {

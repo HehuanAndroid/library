@@ -1,6 +1,8 @@
 package com.fengwenyi.app.tools;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.widget.Toast;
@@ -17,6 +19,7 @@ public class UtilWenyiFeng {
      * @param context 上下文
      * @param msg 提示文字
      */
+    @Deprecated
     public static void toast(Context context, String msg) {
         Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
     }
@@ -41,5 +44,18 @@ public class UtilWenyiFeng {
             }
         }
         return false;
+    }
+
+    /**
+     * 跳转
+     * @param context 上下文
+     * @param cls     目标页面
+     * @param isFinishCurrent  是否需要关闭当前页面
+     */
+    public static void intent(Context context, Class<?> cls, boolean isFinishCurrent) {
+        Intent intent = new Intent(context, cls);
+        context.startActivity(intent);
+        if (isFinishCurrent)
+            AppManager.getInstance().finishCurrentActivity();
     }
 }

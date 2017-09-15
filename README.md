@@ -16,6 +16,7 @@
 |RegularUtilWenyiFeng      |正则表达式工具类|
 |UtilWebServiceWenyiFeng   |请求WebService接口工具类|
 |UtilWenyiFeng             |常用工具类|
+|ToastWenyiFeng            |Toast类|
 
 
 
@@ -32,7 +33,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency(由于更新非常快，请特别注意版本号)
 
 	dependencies {
-	        compile 'com.github.fengwenyi:library:170908.10'
+	        compile 'com.github.fengwenyi:library:170908.11'
 	}
 
 
@@ -147,12 +148,37 @@ wsdl地址：String
 #### 7、UtilWenyiFeng类
 |方法名       |参数    |返回    |说明|
 |:----        |:---    |:---    |:---|
-|toast()      |Context, String| |static, 文字提示弹窗，参数（上下文，提示文字）|
+|toast()      |Context, String| |static, 文字提示弹窗，参数（上下文，提示文字）, 已过时，交由ToastWenyiFeng类进行统一管理|
 |isNetworkAvailable()|Context | |static, 检测当前网络是否可用，参数（上下文）|
+|intent()     |Context, Class<?>, boolean||static, Activity跳转，参数（上下文，目标Activity，是否需要关闭当前Activity）|
 
 值得说明的是：关闭APP方法需要以下权限：
 ```
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
+#### 8、ToastWenyiFeng类(Kotlin)
+|方法名       |参数    |返回    |说明|
+|:----        |:---    |:---    |:---|
+|isShow()     |        |        |获取属性isShow的值|
+|isShow()     |Boolean |        |修改属性isShow的值|
+|showShort()  |Context, CharSequence||短时间显示字符类型，参数（上下文，信息）|
+|showShort()  |Context, Int|    |短时间显示Int，参数（上下文，信息）|
+|showLong()   |Context, CharSequence||长时间显示字符类型，参数（上下文，信息）|
+|showLong()   |Context, Int|    |长时间显示字符类型，参数（上下文，信息）|
+|show()       |Context, CharSequence||自定义时间显示字符类型，参数（上下文，信息）|
+|show()       |Context, Int|    |自定义时间显示Int，参数（上下文，信息）|
+
+Java 调用示例：
+```
+       ToastWenyiFeng.Companion.isShow();
+       ToastWenyiFeng.Companion.isShow(false);
+```
+
+Kotlin 调用示例：
+```
+        ToastWenyiFeng.isShow
+        ToastWenyiFeng.isShow(false)
 ```
 
 ###### About me

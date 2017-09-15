@@ -1,5 +1,7 @@
 package com.fengwenyi.app;
 
+import com.fengwenyi.app.tools.ToastWenyiFeng;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
