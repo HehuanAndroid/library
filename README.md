@@ -165,9 +165,15 @@ wsdl地址：String
 |showShort()  |Context, CharSequence||短时间显示字符类型，参数（上下文，信息）|
 |showShort()  |Context, Int|    |短时间显示Int，参数（上下文，信息）|
 |showLong()   |Context, CharSequence||长时间显示字符类型，参数（上下文，信息）|
-|showLong()   |Context, Int|    |长时间显示字符类型，参数（上下文，信息）|
+|showLong()   |Context, Int|    |长时间显示Int，参数（上下文，信息）|
 |show()       |Context, CharSequence||自定义时间显示字符类型，参数（上下文，信息）|
 |show()       |Context, Int|    |自定义时间显示Int，参数（上下文，信息）|
+
+特别说明的是：
+```
+	属性isShow如果为true，toast方法有效，
+	如果为false，则toast方法无效
+```
 
 Java 调用示例：
 ```
@@ -179,6 +185,16 @@ Kotlin 调用示例：
 ```
         ToastWenyiFeng.isShow
         ToastWenyiFeng.isShow(false)
+```
+
+## 版本更新说明
+
+#### 170908.12
+```
+	1、在UtilWenyiFeng中增加intent()方法
+	2、增加ToastWenyiFeng类
+	3、将UtilWenyiFeng中toast标记已过时，但不影响使用
+	详细请查看API部分
 ```
 
 ###### About me
