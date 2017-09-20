@@ -17,6 +17,8 @@
 |UtilWebServiceWenyiFeng   |请求WebService接口工具类|
 |UtilWenyiFeng             |常用工具类|
 |ToastWenyiFeng            |Toast类|
+|ColorUtilWenyiFeng        |颜色工具类|
+|ConstantWenyiFeng         |常量类|
 
 
 
@@ -33,7 +35,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency(由于更新非常快，请特别注意版本号)
 
 	dependencies {
-	        compile 'com.github.fengwenyi:library:170908.12'
+	        compile 'com.github.fengwenyi:library:170920.13'
 	}
 
 
@@ -151,6 +153,8 @@ wsdl地址：String
 |toast()      |Context, String| |static, 文字提示弹窗，参数（上下文，提示文字）, 已过时，交由ToastWenyiFeng类进行统一管理|
 |isNetworkAvailable()|Context | |static, 检测当前网络是否可用，参数（上下文）|
 |intent()     |Context, Class<?>, boolean||static, Activity跳转，参数（上下文，目标Activity，是否需要关闭当前Activity）|
+|randomNum()  |int     |double  |static, 随机数，范围[0, range), 参数（范围）|
+|randomNum()  |int, int|double  |static, 随机数，范围[y, x], 参数（最大值, 最小值）|
 
 值得说明的是：关闭APP方法需要以下权限：
 ```
@@ -187,7 +191,25 @@ Kotlin 调用示例：
         ToastWenyiFeng.isShow(false)
 ```
 
+#### 9、ColorUtilWenyiFeng类
+|方法名       |参数    |返回    |说明|
+|:----        |:---    |:---    |:---|
+|random()     |        |int     |static, 随机颜色, 返回（颜色int）, API大于26, 支持透明度|
+
+#### 10、ConstantWenyiFeng类
+|名称         |值      |说明|
+|:----        |:---    |:---|
+|TAG          |FWY_TAG |标记|
+
 ## 版本更新说明
+
+#### 170920.13
+```
+	1、在UtilWenyiFeng中增加randomNum()方法
+	2、增加ColorUtilWenyiFeng类
+	3、增加ConstantWenyiFeng类
+	详情请查看API模块
+```
 
 #### 170908.12
 ```

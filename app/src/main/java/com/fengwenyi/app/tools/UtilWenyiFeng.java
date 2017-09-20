@@ -7,6 +7,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.widget.Toast;
 
+import java.util.Random;
+
 /**
  * WenyiFeng(xfsy2014@gmail.com)
  * 2017-07-07 15:07
@@ -57,5 +59,28 @@ public class UtilWenyiFeng {
         context.startActivity(intent);
         if (isFinishCurrent)
             AppManager.getInstance().finishCurrentActivity();
+    }
+
+    /**
+     * 随机数
+     * @param range
+     * @return [0, range)
+     */
+    public static double randomNum(int range) {
+        return Math.random()*range;
+    }
+
+    /**
+     * 随机数
+     * @param x 最大值
+     * @param y 最小值
+     * @return [y, x]
+     */
+    public static double randomNum(int x, int y) {
+        int max = x + 1;
+        int min = y + 1;
+        Random random = new Random();
+        int result = random.nextInt(max)%(max-min+1) + min;
+        return result - 1;
     }
 }

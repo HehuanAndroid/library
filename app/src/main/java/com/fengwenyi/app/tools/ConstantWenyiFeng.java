@@ -6,5 +6,5 @@ package com.fengwenyi.app.tools;
  */
 
 public class ConstantWenyiFeng {
-    String TAG = "FWY_TAG";
+    public static final String TAG = "FWY_TAG";
 }
