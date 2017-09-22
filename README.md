@@ -35,7 +35,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency(由于更新非常快，请特别注意版本号)
 
 	dependencies {
-	        compile 'com.github.fengwenyi:library:170920.13'
+	        compile 'com.github.fengwenyi:library:170926.14'
 	}
 
 
@@ -156,7 +156,7 @@ wsdl地址：String
 |randomNum()  |int     |double  |static, 随机数，范围[0, range), 参数（范围）|
 |randomNum()  |int, int|double  |static, 随机数，范围[y, x], 参数（最大值, 最小值）|
 
-值得说明的是：关闭APP方法需要以下权限：
+值得说明的是：检测网络需要以下权限：
 ```
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
@@ -194,7 +194,20 @@ Kotlin 调用示例：
 #### 9、ColorUtilWenyiFeng类
 |方法名       |参数    |返回    |说明|
 |:----        |:---    |:---    |:---|
-|random()     |        |int     |static, 随机颜色, 返回（颜色int）, API大于26, 支持透明度|
+|random()     |        |int     |static, 随机颜色, 返回（颜色id）, API为26及以上, 支持透明度|
+|randomRecommend()|    |int     |static, 推荐颜色随机，返回（颜色id）|
+|randomCustom()|int[]  |int     |static, 自定义颜色随机，参数（颜色id数组），返回（颜色id）|
+
+自定义颜色调用示例：
+```
+	int [] colors = {Color.parseColor("#000000"), Color.parseColor("#7F7F7F"), Color.parseColor("#880015"),
+                Color.parseColor("#ED1C24"), Color.parseColor("#FF7F27"), Color.parseColor("#FFF200"),
+                Color.parseColor("#22B14C"), Color.parseColor("#00A2E8"), Color.parseColor("#3F48CC"),
+                Color.parseColor("#A349A4"), Color.parseColor("#B97A57"), Color.parseColor("#FFAEC9"),
+                Color.parseColor("#B5E61D"), Color.parseColor("#99D9EA"), Color.parseColor("#7092BE"),
+                Color.parseColor("#C8BFE7")};
+        int colorId = ColorUtilWenyiFeng.randomCustom(colors);
+```
 
 #### 10、ConstantWenyiFeng类
 |名称         |值      |说明|
@@ -202,6 +215,13 @@ Kotlin 调用示例：
 |TAG          |FWY_TAG |标记|
 
 ## 版本更新说明
+
+#### 170926.14
+```
+	1、在ColorUtilWenyiFeng中增加randomRecommend()方法：推荐颜色随机
+	2、在ColorUtilWenyiFeng中增加randomCustom()方法：自定义颜色随机
+	详情请查看API模块
+```
 
 #### 170920.13
 ```
@@ -219,9 +239,11 @@ Kotlin 调用示例：
 	详细请查看API部分
 ```
 
+------------
+
 ###### About me
 ```
 WenyiFeng(xfsy2014@gmail.com)
 
-Copyright © 2017 fengwenyi.com. All Rights Reserved.
+Copyright ©2017 Wenyi Feng. All Rights Reserved.
 ```

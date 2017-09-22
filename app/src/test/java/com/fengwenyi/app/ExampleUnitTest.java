@@ -1,5 +1,9 @@
 package com.fengwenyi.app;
 
+import android.graphics.Color;
+
+import com.fengwenyi.app.tools.ColorUtilWenyiFeng;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;

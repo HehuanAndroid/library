@@ -25,4 +25,31 @@ public class ColorUtilWenyiFeng {
                     (int)UtilWenyiFeng.randomNum(255, 0),
                     (int)UtilWenyiFeng.randomNum(255, 0));
     }
+
+    /**
+     * 推荐颜色随机
+     * @return
+     */
+    public static int randomRecommend() {
+        int [] colors = {Color.parseColor("#000000"), Color.parseColor("#7F7F7F"), Color.parseColor("#880015"),
+                Color.parseColor("#ED1C24"), Color.parseColor("#FF7F27"), Color.parseColor("#FFF200"),
+                Color.parseColor("#22B14C"), Color.parseColor("#00A2E8"), Color.parseColor("#3F48CC"),
+                Color.parseColor("#A349A4"), Color.parseColor("#B97A57"), Color.parseColor("#FFAEC9"),
+                Color.parseColor("#B5E61D"), Color.parseColor("#99D9EA"), Color.parseColor("#7092BE"),
+                Color.parseColor("#C8BFE7")};
+        int randomNum = (int) UtilWenyiFeng.randomNum(15, 0);
+        return colors[randomNum];
+    }
+
+    /**
+     * 自定义颜色随机
+     * @param customColors
+     * @return
+     */
+    public static int randomCustom(int ... customColors) {
+        int [] colors = customColors;
+        int colorCount = customColors.length;
+        int randomNum = (int) UtilWenyiFeng.randomNum(colorCount - 1, 0);
+        return colors[randomNum];
+    }
 }
