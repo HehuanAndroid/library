@@ -173,7 +173,7 @@ Kotlin 调用示例：
 |:----        |:---    |:---|
 |TAG          |FWY_TAG |标记|
 
-#### 10、FileUtilWenyiFeng类
+#### 11、FileUtilWenyiFeng类
 |方法名       |参数    |返回    |说明|
 |:----        |:---    |:---    |:---|
 |write()      |String, String, boolean||static，将字符串写入到文件中，参数（文件路径，要写入放入字符串，写入方式）|
