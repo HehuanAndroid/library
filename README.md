@@ -1,6 +1,6 @@
 # library
 
-> 声明：这里可能会有你分享的方法，在此表示感谢。如果可能，请联系我，加上原作者信息。
+声明：这里可能会有你分享的方法，在此表示感谢。如果可能，请联系我，加上原作者信息。
 
 每当我们开始写Android项目的时候，就会很头痛的构建各种繁琐工具类，因此在这样的背景下，Android工具类库诞生了，我们致力于构建一款强大的Android工具类库，目的是让你在写项目的时候，可以参考或者直接引入。
 
@@ -9,35 +9,13 @@
 ## 工具类列表
 | 类名                     | 说明|
 |:--------                 |:-----|
-|AppManager                |Activity管理工具类|
-|CallBackWenyiFeng         |回调接口|
-|FontImgWenyiFeng          |字体图片工具类|
-|ProgressDialogWenyiFeng   |进度对话框工具类|
-|RegularUtilWenyiFeng      |正则表达式工具类|
-|UtilWebServiceWenyiFeng   |请求WebService接口工具类|
-|UtilWenyiFeng             |常用工具类|
-|ToastWenyiFeng            |Toast类|
-|ColorUtilWenyiFeng        |颜色工具类|
-|ConstantWenyiFeng         |常量类|
-|FileUtilWenyiFeng         |文件工具类|
+
 
 
 
 ## 引入
-Step 1. Add the JitPack repository to your build file
 
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-
-Step 2. Add the dependency
-
-	dependencies {
-	        compile 'com.github.fengwenyi:library:170926.15'
-	}
+暂无新版引入方法
 
 
 ## 版本更新说明
@@ -80,5 +58,5 @@ Step 2. Add the dependency
 ```
 Wenyi Feng(xfsy2014@gmail.com)
 
-Copyright ©2017 Wenyi Feng. All Rights Reserved.
+Copyright © 2017 Wenyi Feng. All Rights Reserved.
 ```
