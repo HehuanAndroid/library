@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AppLib</string>
+    <string name="ipd_msg">拼命加载中···</string>
+</resources>
