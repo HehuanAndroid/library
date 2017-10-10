@@ -19,6 +19,7 @@ onFail(msg : String?)
 ```
 
 下面分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	new ICallBack<String>() {
@@ -84,6 +85,7 @@ appExit(context : Context)
 ```
 
 下面为addActivity(activity: Activity)方法分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	AppManager appManager = AppManager.Companion.getInstance();
@@ -121,6 +123,7 @@ randomCustom(colors : IntArray) : Int
 ```
 
 下面为randomCustom(colors : IntArray) : Int方法分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	int [] colors = {Color.parseColor("#000000")};
@@ -220,6 +223,7 @@ write(path : String, str : String, isNewMode : Boolean)
 ```
 
 下面为write(path : String, str : String, isNewMode : Boolean)方法分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	String path = "";
@@ -255,6 +259,7 @@ injectFont(rootView: View, tf : Typeface)
 ```
 
 下面为injectFont(rootView : View)方法分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	FontImgUtil.INSTANCE.injectFont(findViewById(R.id.tvTestFontImg));
@@ -286,6 +291,7 @@ randomNum(x : Int, y : Int) : Int
 ```
 
 下面为randomNum(range : Int) : Double方法分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	double randomNum = MathUtil.INSTANCE.randomNum(10);
@@ -309,6 +315,7 @@ isAvailable(context: Context): Boolean
 ```
 
 下面为isAvailable(context: Context): Boolean方法分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	boolean isNetIsAvailable = NetworkUtil.INSTANCE.isAvailable(this);
@@ -401,6 +408,7 @@ dismiss()
              isCanceledOnTouchOutside : Boolean,
              isCancelable : Boolean)方法分别给出Java和Kotlin使用示例
 Java:
+
 ```
 	ProgressDialogUtil.INSTANCE.show(this, 
                 "玩命加载中...", 
@@ -434,6 +442,7 @@ verify(REGEX : String, str : String) : Boolean
 ###### 值得一提的是，我们在常量类中给出了一些常用的正则表达式，你可以直接拿来用。
 
 下面通过验证密码分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	RegularUtil.INSTANCE.verify(Constant.INSTANCE.getREGEX_PASSWORD(), "xfsy2017");
@@ -466,6 +475,7 @@ show(context: Context, msg : Int)
 ###### 值得一提的是，我们将Toast显示的时间长度默认为：Toast.LENGTH_SHORT。
 
 下面为show(context: Context, msg : CharSequence)方法分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	ToastUtil.INSTANCE.show(this, "Hello");
@@ -489,6 +499,7 @@ intent(context: Context, cls: Class<*>)
 ```
 
 下面为intent(context: Context, cls: Class<*>)方法分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	Utils.INSTANCE.intent(this, SecondActivity.class);
@@ -532,6 +543,7 @@ setIsDotNet(isDotNet : Boolean)
 ```
 
 下面分别给出Java和Kotlin使用示例
+
 Java:
 ```
 	// 创建一个对象
