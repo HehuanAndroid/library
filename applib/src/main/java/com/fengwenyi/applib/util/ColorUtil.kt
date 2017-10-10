@@ -12,6 +12,7 @@ object ColorUtil {
 
     /**
      * 随机颜色
+     * @return: Int
      */
     fun random() : Int {
         return if (Build.VERSION.SDK_INT >= 26)
@@ -27,12 +28,14 @@ object ColorUtil {
 
     /**
      * 推荐颜色随机
+     * @return: Int
      */
     fun randomRecommend() : Int = Constant.colors[MathUtil.randomNum(Constant.colors.size - 1, 0)]
 
     /**
      * 自定义颜色随机
+     * @return: Int
      */
-    fun randomCustom(colors : Array<Int>) : Int = colors[MathUtil.randomNum(colors.size - 1, 0)]
+    fun randomCustom(colors : IntArray) : Int = colors[MathUtil.randomNum(colors.size - 1, 0)]
 
 }

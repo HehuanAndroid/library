@@ -6,19 +6,47 @@
 
 然后，由于作者是一个Android新手，难免会有各种BUG，但是作者会持续更新，还请多多关注。
 
-## 工具类列表
-| 类名                     | 说明|
+## 接口列表
+| 名称                     | 说明|
 |:--------                 |:-----|
+|ICallBack                 |回调接口|
 
+
+## 工具类列表
+| 名称                     | 说明|
+|:--------                 |:-----|
+|AppManager                |Activity管理工具类|
+|ColorUtil                 |Android颜色工具类|
+|Constant                  |常量类|
+|FileUtil                  |文件工具类|
+|FontImgUtil               |字体图片工具类|
+|MathUtil                  |数学工具类|
+|NetworkUtil               |网络工具类|
+|ProgressDialogUtil        |进度对话框工具类|
+|RegularUtil               |正则验证工具类|
+|ToastUtil                 |Toast工具类|
+|Utils                     |常用工具类|
+|WebServiceUtil            |Android请求WebService接口|
 
 
 
 ## 引入
 
-暂无新版引入方法
+新版正在测试中……
+
+## 测试截图（部分）
 
 
 ## 版本更新说明
+
+#### 171009.17
+```
+	1、重新编写新的Module
+	2、重新命名
+	3、将之前的JAVA全部替换成Kotlin
+	4、开始加入其他人的工具类
+	详情请查看API文件（API.md）
+```
 
 #### 170926.15
 ```
@@ -51,6 +79,20 @@
 	3、将UtilWenyiFeng中toast标记已过时，但不影响使用
 	详细请查看API部分
 ```
+
+##### 依赖说明
+|                      依赖                             |
+|                     :----                             |
+|com.android.support:appcompat-v7:26.1.0                |
+|junit:junit:4.12                                       |
+|org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version|
+|com.android.support:recyclerview-v7:26.1.0             |
+
+
+##### jar
+|                     jar                             |
+|                   :----                             |
+|ksoap2-android-assembly-2.4-jar-with-dependencies.jar|
 
 ------------
 

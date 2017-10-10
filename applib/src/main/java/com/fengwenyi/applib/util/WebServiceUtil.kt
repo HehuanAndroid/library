@@ -18,7 +18,7 @@ import java.io.IOException
  * Wenyi Feng(xfsy2014@gmail.com)
  * 2017-09-29 15:58
  */
-object WebServiceUtil {
+class WebServiceUtil {
 
     /**
      * 访问的服务器是否由dotNet开发

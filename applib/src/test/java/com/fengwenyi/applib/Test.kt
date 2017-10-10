@@ -1,12 +1,18 @@
 package com.fengwenyi.applib
 
-import com.fengwenyi.applib.util.AppManager
-import java.io.File
+import android.graphics.Color
+import com.fengwenyi.applib.jk.ICallBack
+import com.fengwenyi.applib.util.*
+import org.ksoap2.serialization.SoapObject
 
 /**
  * Wenyi Feng(xfsy2014@gmail.com)
- * 2017-09-29 11:10
+ * 2017-10-09 15:49
  */
-fun test() {
-    File("").readText()
+class Test {
+
+    fun test() {
+
+    }
+
 }

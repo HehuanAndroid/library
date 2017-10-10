@@ -50,11 +50,9 @@ class AppManager {
     }
 
     companion object {
-
         /**
          * 通过静态实例化来实现单例模式
          */
         val instance = AppManager()
-
     }
 }

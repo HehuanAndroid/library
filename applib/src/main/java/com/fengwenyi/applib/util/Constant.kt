@@ -17,7 +17,7 @@ object Constant {
     /**
      * 颜色数组
      */
-    val colors = arrayOf(
+    val colors = intArrayOf(
             Color.parseColor("#000000"), Color.parseColor("#7F7F7F"),
             Color.parseColor("#880015"), Color.parseColor("#ED1C24"),
             Color.parseColor("#FF7F27"), Color.parseColor("#FFF200"),
@@ -53,7 +53,7 @@ object Constant {
     val REGEX_PHONE = "^((17[0-9])|(14[0-9])|(13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$"
 
     /**
-     * 正则：email
+     * 正则：E-MAIL
      */
     val REGEX_EMAIL = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$"
 
@@ -68,12 +68,12 @@ object Constant {
     val REGEX_ID_CARD = "(^\\d{18}$)|(^\\d{15}$)"
 
     /**
-     * 正则：uri
+     * 正则：URI
      */
     val REGEX_URI = "http(s)?://([\\w-]+\\.)+[\\w-]+(/[\\w- ./?%&=]*)?"
 
     /**
-     * 正则：ip
+     * 正则：IP
      */
     val REGEX_IP = "(25[0-5]|2[0-4]\\d|[0-1]\\d{2}|[1-9]?\\d)"
 

@@ -3,11 +3,13 @@ package com.fengwenyi.applib.util
 import android.app.ProgressDialog
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import com.fengwenyi.applib.R
+import android.view.Gravity
 
 /**
  * Wenyi Feng(xfsy2014@gmail.com)
@@ -85,6 +87,35 @@ object ProgressDialogUtil {
         // 显示
         dialog.show()
         dialog.setContentView(view, param)
+    }
+
+    /**
+     * 仿IOS样式模糊进度对话框
+     * @author: meihuali
+     */
+    fun showIos(context: Context,
+                message: CharSequence,
+                isCanceledOnTouchOutside: Boolean,
+                isCancelable : Boolean) {
+        dialog = ProgressDialog(context, R.style.progressDialogIos)
+        // 点击外边距是否可取消
+        dialog.setCanceledOnTouchOutside(isCanceledOnTouchOutside)
+        // 点击back键是否可取消
+        dialog.setCancelable(isCancelable)
+        dialog.setContentView(R.layout.layout_progress_dialog_ios)
+        val tvMsg = dialog.findViewById<TextView>(R.id.message)
+        if (message == null || message.length === 0) {
+            tvMsg.visibility = View.GONE
+        } else {
+            tvMsg.text = message
+        }
+        // 设置居中
+        dialog.window.attributes.gravity = Gravity.CENTER
+        val lp = dialog.window.attributes
+        // 设置背景层透明度
+        lp.dimAmount = 0.2f
+        dialog.window.attributes = lp
+        dialog.show()
     }
 
     /**
